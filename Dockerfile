@@ -1,5 +1,5 @@
 FROM suse/sles12sp2:latest
-ADD script/postgres-setup.sh /bin/postgres-setup.sh
+ADD postgres-setup.sh /bin/postgres-setup.sh
 RUN chmod +x /bin/postgres-setup.sh
 RUN zypper --gpg-auto-import-keys ref -s
 RUN zypper in -y vim postgresql-init postgresql94 postgresql94-server
